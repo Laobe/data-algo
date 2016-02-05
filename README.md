@@ -1,2 +1,2 @@
-#data-algro
-<p>The basic data structure and algrothime with golang</p> 
+#data-algo
+<p>The basic data structure and algorithm with golang</p> 
