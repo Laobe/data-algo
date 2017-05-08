@@ -26,8 +26,8 @@ def MaxSubSequence2(lists=None):
     max_sum = 0
     for i in range(len(lists)):
         this_sum = 0
-        for j in range(i, len(lists)):
-            this_sum += lists[j]
+        for j in lists[i+1:]:
+            this_sum += j
             max_sum = max(max_sum, this_sum)
     return max_sum
 
@@ -39,13 +39,12 @@ def MaxSubSequence4(lists=None):
         lists = []
     max_sum = 0
     this_sum = 0
-    for j in range(len(lists)):
-        this_sum += lists[j]
-        if this_sum < 0:
+    for j in lists:
+        this_sum += j
+        if this_sum <= 0:
             this_sum = 0
-        elif this_sum > max_sum:
+        else:
             max_sum = this_sum
-        print(this_sum)
     return max_sum
 
 
